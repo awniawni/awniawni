@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awni?</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css?v=1">
+
+</head>
+<body>
+
+    <div class="title">
+        <a href="https://linktr.ee/awni.cymru" class="logo-link">
+            <img src="logo.png" alt="awni?" width="160" height="auto">
+        </a>
+    </div>    
+    
+    <p>iawn? hwn yn handi i ffeindio gigs sy 'mlaen 👇 croeso x</p>
+
+    <div style="height: 10px;"></div>
+
+    <div class="toggle-container">
+        <div class="toggle-switch">
+            <input type="checkbox" id="this-week-toggle">
+            <label for="this-week-toggle">Wsos yma</label>
+        </div>
+        <div class="toggle-switch">
+            <input type="checkbox" id="this-month-toggle">
+            <label for="this-month-toggle">Mis yma</label>            
+        </div>
+    </div>
+
+    <div class="date-picker-toggle">
+        <button id="toggle-date-picker" class="toggle-button">🗓️ Dewis dyddiada'</button>
+    </div>
+
+    <div id="date-picker-overlay" class="overlay">
+        <div id="date-picker-container" class="date-picker-container">
+            <div class="top-row">
+                <div class="close-button-container">
+                    <button id="close-date-picker" class="close-button">
+                        <img src="images/CloseButton.png" alt="Cau" class="close-icon">
+                    </button>
+                </div>
+                <h2 class="date-picker-heading">🗓️ Dewis dyddiada'</h2>
+            </div>
+            <div class="date-input-group">
+                <label for="check-in">Rhwng:</label>
+                <input type="date" id="check-in" name="check-in">
+            </div>
+            <div class="date-input-group">
+                <label for="check-out">a:</label>
+                <input type="date" id="check-out" name="check-out">
+            </div>
+            <div class="date-buttons">
+                <button id="apply-date-range" class="toggle-button">Dewis</button>
+                <button id="clear-date-filter" class="toggle-button">Clirio</button>
+            </div>
+        </div>
+    </div>
+
+<div id="event-count-container" class="event-count-container">
+    <div id="event-count-circle" class="event-count-circle">
+        <span id="event-count">5</span>
+    </div>
+    <p class="event-count-text">gig ar y map 🗺️</p>
+</div>
+
+<div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+    <!-- Link to external JavaScript -->
+    <script type="module" src="script.js"></script>
+
+<footer class="footer">
+    <p>wedi'i gefnogi gan:</p>
+    <a href="https://sainwales.com/cy" target="_blank">
+        <img src="images/logosain.png" alt="Logo Sain" class="footer-logo">
+    </a>
+    <span class="plus-text">+</span>
+    <a href="https://www.rhaglenarfor.cymru/index.en.html" target="_blank">
+        <img src="images/logoarfor.png" alt="Logo Arfor" class="footer-logo">
+    </a>
+</footer>     
+
+</body>
+</html>
+
+
+
