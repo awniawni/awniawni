@@ -333,8 +333,8 @@ p {
 
 /* Style for the custom close button */
 .custom-close-button {
-    background-color: #bbbbbb; /* Red background */
-    color: white; /* White text */
+    background-color: #bbbbbb; /* Background color */
+    color: white; /* Text color */
     border: none; /* Remove border */
     border-radius: 50%; /* Make it circular */
     width: 30px; /* Set width */
@@ -349,11 +349,24 @@ p {
     right: -10px; /* Offset from the right of the popup */
     z-index: 1000; /* Ensure it appears above other elements */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+    display: flex; /* Use flexbox for proper centering */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
     transition: transform 0.2s ease, background-color 0.2s ease; /* Add hover effect */
 }
 
 /* Hover effect for the close button */
 .custom-close-button:hover {
-    background-color: #525252; /* Darker red on hover */
+    background-color: #525252; /* Darker background on hover */
     transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .custom-close-button {
+        width: 25px; /* Adjust width for smaller screens */
+        height: 25px; /* Adjust height for smaller screens */
+        font-size: 14px; /* Adjust font size */
+        line-height: 25px; /* Adjust vertical alignment */
+    }
 }
