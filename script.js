@@ -111,14 +111,19 @@ popupContent.appendChild(closeButton);
             if (closeButton) {
                 closeButton.onclick = () => {
                     console.log("Custom close button clicked. Closing popup and zooming out.");
+                    
+                    const currentCenter = map.getCenter(); // Get the current map center
+                    const zoomOutLevel = defaultZoom; // Define the zoom-out level
+        
                     marker.closePopup(); // Close the popup associated with this marker
-                    map.flyTo(defaultView, defaultZoom, { 
+        
+                    map.flyTo(currentCenter, zoomOutLevel, { 
                         animate: true,
-                        duration: 0.5, 
-                    }); // Reset zoom and view
+                        duration: 0.3, 
+                    }); // Stay in the same area and zoom out
                 };
             }
-        });
+        });        
 
         markers.push(marker); // Move this outside of the popupopen listener
     });
