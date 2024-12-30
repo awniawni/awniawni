@@ -9,57 +9,41 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="style.css?v=1">
+    <script type="module" src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>    
 
 </head>
 <body>
 
     <div class="title">
         <a href="https://linktr.ee/awni.cymru" class="logo-link">
-            <img src="logo.png" alt="awni?" width="160" height="auto">
+            <img src="logo.png" alt="awni?" width="130" height="auto">
         </a>
     </div>    
     
     <p>iawn? hwn yn handi i ffeindio gigs sy 'mlaen 👇 croeso x</p>
 
-    <div style="height: 10px;"></div>
-
-    <div class="toggle-container">
+    <div class="toggle-row">
         <div class="toggle-switch">
             <input type="checkbox" id="this-week-toggle">
             <label for="this-week-toggle">Wsos yma</label>
         </div>
         <div class="toggle-switch">
             <input type="checkbox" id="this-month-toggle">
-            <label for="this-month-toggle">Mis yma</label>            
+            <label for="this-month-toggle">Mis yma</label>
         </div>
     </div>
-
-    <div class="date-picker-toggle">
-        <button id="toggle-date-picker" class="toggle-button">🗓️ Dewis dyddiada'</button>
-    </div>
-
-    <div id="date-picker-overlay" class="overlay">
-        <div id="date-picker-container" class="date-picker-container">
-            <div class="top-row">
-                <div class="close-button-container">
-                    <button id="close-date-picker" class="close-button">
-                        <img src="images/CloseButton.png" alt="Cau" class="close-icon">
-                    </button>
-                </div>
-                <h2 class="date-picker-heading">🗓️ Dewis dyddiada'</h2>
-            </div>
-            <div class="date-input-group">
-                <label for="check-in">Rhwng:</label>
-                <input type="date" id="check-in" name="check-in">
-            </div>
-            <div class="date-input-group">
-                <label for="check-out">a:</label>
-                <input type="date" id="check-out" name="check-out">
-            </div>
-            <div class="date-buttons">
-                <button id="apply-date-range" class="toggle-button">Dewis</button>
-                <button id="clear-date-filter" class="toggle-button">Clirio</button>
-            </div>
+    <div class="toggle-row">
+        <div class="toggle-switch">
+            <div class="choose-dates-container">
+                <!-- Use a button for the toggle -->
+                <button id="choose-dates-toggle" class="toggle-button">🗓️ Dewis dyddia'</button>
+                <!-- Ensure the input is properly set up for flatpickr -->
+                <input id="calendar-input" class="flatpickr-input" type="text" style="display: none;" />
+                <button class="clear-dates-button" style="display: none;">✖️</button>
+            </div>                       
         </div>
     </div>
 
@@ -67,7 +51,7 @@
     <div id="event-count-circle" class="event-count-circle">
         <span id="event-count">5</span>
     </div>
-    <p class="event-count-text">gig ar y map 🗺️</p>
+    <p class="event-count-text">gig ar y map</p>
 </div>
 
 <div id="map"></div>
@@ -77,6 +61,9 @@
 
     <!-- Link to external JavaScript -->
     <script type="module" src="script.js"></script>
+
+   <!-- Link to calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <footer class="footer">
     <p>wedi'i gefnogi gan:</p>
@@ -91,6 +78,3 @@
 
 </body>
 </html>
-
-
-
