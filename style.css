@@ -1,6 +1,6 @@
 /* ===== Global Styles ===== */
 body {
-    background-color: white;
+    background-color: rgb(249, 248, 248);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@ p {
 #content h2 {
     color: #000000; /* White text */
     overflow: hidden; /* Hide text outside the container */
-    font-size: 5vw; /* Adjust font size */
+    font-size: clamp(1.5rem, 5vw, 3rem)
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 auto;
@@ -254,7 +254,6 @@ p {
 /* Footer styling */
 .footer {
     width: 100%; /* Full width */
-    background-color: #ffffff; /* Light grey background */
     padding: 20px; /* Add spacing */
     box-sizing: border-box; /* Include padding in width calculations */
     display: flex;
