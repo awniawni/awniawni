@@ -15,6 +15,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// Wait for the DOM to fully load
+window.addEventListener("load", function () {
+    // Wait 4 seconds before hiding the loading screen
+    setTimeout(() => {
+        const loaderWrapper = document.getElementById("loader-wrapper");
+        loaderWrapper.style.opacity = "0"; // Fade out effect
+        loaderWrapper.style.transition = "opacity 0.5s ease"; // Smooth transition
+
+        // Remove the loader from the DOM after fading out
+        setTimeout(() => {
+            loaderWrapper.style.display = "none";
+        }, 500); // Match the fade-out duration
+    }, 2500); // Time in milliseconds (4 seconds)
+});
+
 // Initialize Map
 const map = L.map('map').setView([52.405778365234234, -3.7434381492128925], 8.4);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?lang=cym', {
