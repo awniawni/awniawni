@@ -34,19 +34,21 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
 #content h2 {
     color: #000000; /* White text */
     overflow: hidden; /* Hide text outside the container */
-    font-size: 2rem; /* Adjust font size */
+    font-size: 5vw; /* Adjust font size */
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 auto;
     white-space: nowrap; /* Ensure text stays on one line */
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
     border-right: 2px solid #000000; /* Optional: Add a typing cursor effect */
-    animation: typing 2s steps(30, end), blink-cursor 0.5s step-end infinite;
+    animation: typing 2s steps(33, end), blink-cursor 0.5s step-end infinite;
 }
 
 /* Typing animation */
@@ -55,9 +57,21 @@ p {
         width: 0;
     }
     to {
-        width: 25ch; /* Full width of the text */
+        width: 100%; /* Adjust this value to fit the entire phrase */
     }
 }
+
+/* Remove cursor blinking effect */
+@keyframes blink-cursor {
+    from {
+        border-right-color: black;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
 
 /* ===== Map ===== */
 #map {
@@ -406,3 +420,4 @@ p {
         line-height: 25px; /* Adjust vertical alignment */
     }
 }
+
