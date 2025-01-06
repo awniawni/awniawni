@@ -420,3 +420,9 @@ p {
     }
 }
 
+.footer-extra-text {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #333; /* Adjust color as needed */
+}
