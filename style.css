@@ -39,7 +39,7 @@ p {
 #content h2 {
     color: #000000; /* White text */
     overflow: hidden; /* Hide text outside the container */
-    font-size: clamp(1.5rem, 5vw, 3rem)
+    font-size: 1.3rem;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 auto;
@@ -212,6 +212,7 @@ p {
     user-select: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    color: #000000;
 }
 
 /* Active State */
@@ -254,7 +255,6 @@ p {
 /* Footer styling */
 .footer {
     width: 100%; /* Full width */
-    padding: 20px; /* Add spacing */
     box-sizing: border-box; /* Include padding in width calculations */
     display: flex;
     align-items: center; /* Align items vertically */
@@ -263,6 +263,9 @@ p {
     font-family: 'Courier New', Courier, monospace; /* Consistent font */
     font-size: 1.2rem; /* Larger font size */
     color: black; /* Text color */
+    margin-top: 0; /* Remove any top margin */
+     padding-top: 0; /* Remove any top padding */
+
 }
 
 .footer p {
@@ -311,10 +314,9 @@ p {
 /* Ensure the container arranges items in a row */
 .toggle-row {
     display: flex;
-    justify-content: center; /* Center the toggles horizontally */
     align-items: center;    /* Align items vertically */
     gap: 10px;              /* Add spacing between toggles */
-    margin: 10px 0;         /* Add some vertical spacing */
+    flex-wrap: nowrap;
 }
 
 /* Adjust the second row spacing for "Choose Dates" */
@@ -336,6 +338,7 @@ p {
     border: 2px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    max-width: 250px;
 }
 
 /* Hover and active states for consistency */
@@ -391,10 +394,10 @@ p {
     font-size: 16px; /* Adjust font size */
     font-weight: bold; /* Bold text */
     text-align: center; /* Center the text */
-    line-height: 30px; /* Center text vertically */
+    line-height: 60px; /* Center text vertically */
     cursor: pointer; /* Change cursor to pointer */
     position: absolute; /* Position within the popup */
-    top: -10px; /* Offset from the top of the popup */
+    top: -25px; /* Offset from the top of the popup */
     right: -10px; /* Offset from the right of the popup */
     z-index: 1000; /* Ensure it appears above other elements */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
@@ -426,3 +429,79 @@ p {
     margin-top: 1rem;
     color: #333; /* Adjust color as needed */
 }
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+p {
+    font-family: 'Courier New', monospace;
+}
+
+.suggestions-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background: white;
+    z-index: 1000;
+    width: 100%;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
