@@ -331,3 +331,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     closeButton.addEventListener("click", resetFilters);
  });
+
