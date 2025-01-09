@@ -82,7 +82,7 @@
         <img src="images/logosain.png" alt="Logo Sain" class="footer-logo">
     </a>
     <span class="plus-text">+</span>
-    <a href=" https://www.rhaglenarfor.cymru/index.html" target="_blank">
+    <a href="https://llwyddonlleol2050.cymru/cronfa-her-arfor-2/" target="_blank">
         <img src="images/logoarfor.png" alt="Logo Arfor" class="footer-logo">
     </a>
 </footer>  
@@ -91,6 +91,31 @@
     isho gig ar y map? gyrra ebost i ni: 
     <a href="mailto:iawn.awni@gmail.com" style="color: blue; text-decoration: underline;">iawn.awni@gmail.com</a>    
 </p>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDxuDIs_n6K04JY1Dux38TSap2FU2OeVq8",
+      authDomain: "backend-awni.firebaseapp.com",
+      databaseURL: "https://backend-awni-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "backend-awni",
+      storageBucket: "backend-awni.firebasestorage.app",
+      messagingSenderId: "265922513342",
+      appId: "1:265922513342:web:bfb09f5f1b762528a1d1ef",
+      measurementId: "G-TLLH3WS0C2"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 
 </body>
 </html>
